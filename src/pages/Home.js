@@ -60,9 +60,9 @@ const Home = () => {
                 <option disabled value="">
                   Select Room
                 </option>
-                <option value="HTML">HTML</option>
-                <option value="CSS">CSS</option>
-                <option value="JS">JS</option>
+                <option value="Friends">Friends</option>
+                <option value="Family">Family</option>
+                <option value="Guest">Guest</option>
               </Input>
               <p className="text-danger">
                 {form.errors.room && form.touched.room && form.errors.room}

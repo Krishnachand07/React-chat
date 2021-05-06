@@ -18,7 +18,7 @@ const MessageContainer = ({ message, user }) => {
     message.map((e, i) => (
       <div key={i} className={user === e.user ? "right":"left"}>
         <ChatBubble
-          value={e.user}
+          value={user === e.user ?"You": e.user}
           date={moment().format("h:mm a")}
           message={e.text}
         />

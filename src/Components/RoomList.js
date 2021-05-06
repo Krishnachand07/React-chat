@@ -1,6 +1,11 @@
 import React from "react";
 import { useHistory } from "react-router";
-import { Button, ListGroup, ListGroupItem } from "reactstrap";
+import {
+  Button,
+  ListGroup,
+  ListGroupItem,
+  ListGroupItemHeading,
+} from "reactstrap";
 import "../css/index.css";
 
 const RoomList = ({ users, room, user }) => {
@@ -29,7 +34,10 @@ const RoomList = ({ users, room, user }) => {
       </div>
       <div className="card-body">
         <div className="room-list">
-          <ListGroup>{generateList()}</ListGroup>
+          <ListGroup>
+            <ListGroupItemHeading>Active Users</ListGroupItemHeading>
+            {generateList()}
+          </ListGroup>
         </div>
       </div>
     </div>
