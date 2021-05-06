@@ -11,11 +11,9 @@ const Home = () => {
       const errors = {};
       if (!e.name) {
         errors.name = "Name is required";
-        errors.className = "border-danger";
       }
       if (!e.room) {
         errors.room = "Room is required";
-        errors.className = "border-danger";
       }
       return errors;
     },

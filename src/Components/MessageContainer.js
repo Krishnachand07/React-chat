@@ -16,9 +16,11 @@ const MessageContainer = ({ message, user }) => {
   }, []);
   const generateList = () =>
     message.map((e, i) => (
-      <div key={i} className={user === e.user ? "right":"left"}>
+      <div key={i} className={user === e.user ? "right" : "left"}>
         <ChatBubble
-          value={user === e.user ?"You": e.user}
+          userStyle={user === e.user ? "bg-secondary":"bg-dark"}
+          textStyle={user === e.user ? "text-white":"text-light"}
+          value={user === e.user ? "You" : e.user}
           date={moment().format("h:mm a")}
           message={e.text}
         />

@@ -1,17 +1,17 @@
 import React from "react";
 import "../css/index.css";
 
-const ChatBubble = ({ value, date, message }) => {
+const ChatBubble = ({ value, date, message, userStyle, textStyle }) => {
   return (
-    <div className="p-3 mt-1 mb-1 border-radius bg-dark">
+    <div className={"p-3 mt-1 mb-1 border-radius " + userStyle}>
       <div className="pl-3">
         <div className="d-flex justify-content-between">
-          <h6 className="text-light">{value}</h6>
-          <p className="text-muted">{date}</p>
+          <h6 className={textStyle}>{value}</h6>
+          <p className="text-white">{date}</p>
         </div>
         <p
           style={{ lineHeight: "20px", fontWeight: "lighter" }}
-          className="text-light msg"
+          className={textStyle + " msg"}
         >
           {message}
         </p>
