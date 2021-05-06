@@ -10,8 +10,8 @@ const ChatBubble = ({ value, date, message }) => {
           <p className="text-muted">{date}</p>
         </div>
         <p
-          style={{ lineHeight: "0px", fontWeight: "lighter" }}
-          className="text-light"
+          style={{ lineHeight: "20px", fontWeight: "lighter" }}
+          className="text-light msg"
         >
           {message}
         </p>

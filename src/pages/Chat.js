@@ -39,7 +39,7 @@ const Chat = () => {
           <RoomList users={name} room={room} user={user} />
         </Col>
         <Col xl={8} lg={6}>
-          <MessageContainer message={message} />
+          <MessageContainer message={message} user={user} />
           <Field />
         </Col>
       </Row>

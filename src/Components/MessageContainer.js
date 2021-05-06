@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from "react";
+import moment from "moment";
+
 import "../css/index.css";
 import ChatBubble from "./ChatBubble";
-const MessageContainer = ({ message }) => {
+
+const MessageContainer = ({ message, user }) => {
   const ref = useRef(null);
   useEffect(() => {
     if (ref) {
@@ -13,11 +16,19 @@ const MessageContainer = ({ message }) => {
   }, []);
   const generateList = () =>
     message.map((e, i) => (
-      <div key={i}>
-        <ChatBubble value={e.user} date={e.time} message={e.text} />
+      <div key={i} className={user === e.user ? "right":"left"}>
+        <ChatBubble
+          value={e.user}
+          date={moment().format("h:mm a")}
+          message={e.text}
+        />
       </div>
     ));
-  return <div ref={ref} className="message-container">{generateList()}</div>;
+  return (
+    <div ref={ref} className="message-container">
+      {generateList()}
+    </div>
+  );
 };
 
 export default MessageContainer;
