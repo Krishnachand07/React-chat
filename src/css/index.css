@@ -7,16 +7,18 @@
 .border-radius {
   display: inline-block;
   position: relative;
-  min-width: 20vw;
-  max-width: 30vw;
+  min-width: 35vw;
+  max-width: 50vw;
   border-radius: 10px;
 }
 
 .left{
+  margin-right: 10%;
   float: left;
   clear: both;
 }
 .right{
+  margin-left: 10%;
   float: right;
   clear: both;
 }
@@ -24,7 +26,7 @@
 .msg {
   display: inline-block;
   position: relative;
-  min-width: 20vw;
+  min-width: 35vw;
   max-width: 100vw;
   height: auto;
 }
