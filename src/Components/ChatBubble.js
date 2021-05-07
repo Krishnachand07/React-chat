@@ -7,10 +7,10 @@ const ChatBubble = ({ value, date, message, userStyle, textStyle }) => {
       <div className="pl-3">
         <div className="d-flex justify-content-between">
           <h6 className={textStyle}>{value}</h6>
-          <p className="text-white">{date}</p>
+          <p className="text-light">{date}</p>
         </div>
         <p
-          style={{ lineHeight: "20px", fontWeight: "lighter" }}
+          style={{ lineHeight: "20px", fontWeight: "normal" }}
           className={textStyle + " msg"}
         >
           {message}
